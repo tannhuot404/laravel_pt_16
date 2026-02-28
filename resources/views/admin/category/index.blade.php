@@ -6,10 +6,12 @@
       <div class="row">
         <div class="d-flex justify-content-between mb-2">
           <h3>Category List</h3>
-          <a class="btn btn-success" href="create_edit.html" role="button"
+          <a class="btn btn-success" href="{{ route('admin.category.create') }}" role="button"
             >Create</a
           >
         </div>
+        @if (count($categories) > 0 )
+        
         <!-- Blog entries-->
         <div class="col-lg-12">
           <div class="card p-3">
@@ -26,287 +28,20 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
+                @foreach ($categories as $item)
+                  <tr>
+                  <td>{{ $loop -> iteration }}</td>
+                  <td>{{ $item->title }}</td>
                   <td>
                     <a
                       class="btn btn-primary btn-sm"
-                      href="create_edit.html"
+                      href="{{ route('admin.category.edit', ['id'=>$item->id]) }}"
                       role="button"
                       >Edit</a
                     >
                   </td>
                 </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-          `btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Page</td>
-                  <td>
-                    <a
-                      class="btn btn-primary btn-sm"
-                      href="create_edit.html"
-                      role="button"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
+                @endforeach
               </tbody>
               <tfoot>
                 <tr>
@@ -318,6 +53,10 @@
             </table>
           </div>
         </div>
+        @else
+          <h1>No Data</h1>
+        @endif
+        
       </div>
     </div>
 @endsection

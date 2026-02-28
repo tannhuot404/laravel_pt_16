@@ -2,6 +2,9 @@
 @extends('layout.main')
 
 @section('content')
+    <x-card title="Testing">
+        <button>Click Me</button>
+    </x-card>
   <!-- Page content-->
     <div class="container mt-5">
       <div class="row">
